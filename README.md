@@ -20,6 +20,6 @@
 
 1. **Клонування репозиторію та запуск проекту**
    ```bash
-   pip install -r requirements.txt
    git clone github.com/santar4/Homework10
+   pip install -r requrenments.txt
    python main.py
