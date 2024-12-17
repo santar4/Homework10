@@ -46,36 +46,6 @@
    ```
 3. Перейдіть за адресою [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 
-## Управління користувачами
-
-### Додавання користувачів
-Оновіть `users_db`, використовуючи `werkzeug.security.generate_password_hash` для хешування паролів:
-```python
-from werkzeug.security import generate_password_hash
-
-users_db["НовийКористувач"] = {
-    "username": "newuser",
-    "hashed_password": generate_password_hash("newpassword"),
-    "role": "user"
-}
-```
-
-### Приклад користувачів
-- **Олег (Користувач):** Логін: `user1`, Пароль: `secret`, Роль: `user`
-- **Майк (Адмін):** Логін: `admin1`, Пароль: `secret2`, Роль: `admin`
-
-## Тестування
-
-Аутентифікація за допомогою інструментів, таких як `cURL`:
-
-- **Отримати захищені дані:**
-  ```bash
-  curl -u user1:secret http://127.0.0.1:8000/secure-data/
-  ```
-- **Отримати доступ до адмін-розділу:**
-  ```bash
-  curl -u admin1:secret2 http://127.0.0.1:8000/admin/users/
-  ```
 
 ### Очікувані помилки
 - **Неавторизовано:** Некоректні облікові дані.
