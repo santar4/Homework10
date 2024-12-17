@@ -38,7 +38,7 @@
 
 1. Встановіть залежності:
    ```bash
-   pip install fastapi uvicorn werkzeug
+   pip install -r requirenments
    ```
 2. Запустіть додаток:
    ```bash
